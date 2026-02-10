@@ -4,6 +4,7 @@ import Modal from './components/Modal'
 import './App.css'
 import GradientBackgroundAnimation from './components/GradientBackgroundAnimation'
 import CursorTrail from './components/CursorTrail'
+import BackgroundMusic from './components/BackgroundMusic'
 import img1 from './assets/20250108_152618.jpg'
 import img2 from './assets/20250215_124732.jpg'
 import img3 from './assets/20250215_140807.jpg'
@@ -82,6 +83,7 @@ function App() {
       
       <GradientBackgroundAnimation />
       <CursorTrail />
+      <BackgroundMusic />
       
       <header className="header">
         <h1 className="title">
