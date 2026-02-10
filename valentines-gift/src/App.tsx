@@ -3,6 +3,7 @@ import Card from './components/Card'
 import Modal from './components/Modal'
 import './App.css'
 import GradientBackgroundAnimation from './components/GradientBackgroundAnimation'
+import CursorTrail from './components/CursorTrail'
 import img1 from './assets/20250108_152618.jpg'
 import img2 from './assets/20250215_124732.jpg'
 import img3 from './assets/20250215_140807.jpg'
@@ -59,6 +60,7 @@ const cardsData: CardData[] = [
 function App() {
   const [selectedCard, setSelectedCard] = useState<CardData | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [showFooterMessage, setShowFooterMessage] = useState(false)
 
   const handleCardClick = (cardId: number) => {
     const card = cardsData.find(c => c.id === cardId)
@@ -79,12 +81,23 @@ function App() {
     <div className="app">
       
       <GradientBackgroundAnimation />
+      <CursorTrail />
       
       <header className="header">
         <h1 className="title">
           Happy Valentine's Day
         </h1>
-        <p className="subtitle">Click op die cards om dit om te draai</p>
+        <p className="subtitle">
+          <span className="subtitle-word subtitle-word-1">Click</span>
+          <span className="subtitle-word subtitle-word-2">op</span>
+          <span className="subtitle-word subtitle-word-3">die</span>
+          <span className="subtitle-word subtitle-word-4">cards</span>
+          <span className="subtitle-word subtitle-word-5">om</span>
+          <span className="subtitle-word subtitle-word-6">dit</span>
+          <span className="subtitle-word subtitle-word-7">om</span>
+          <span className="subtitle-word subtitle-word-8">te</span>
+          <span className="subtitle-word subtitle-word-9">draai</span>
+        </p>
       </header>
 
       <main className="cards-grid">
@@ -100,6 +113,14 @@ function App() {
         ))}
       </main>
 
+      <button 
+        className="reveal-button" 
+        onClick={() => setShowFooterMessage(true)}
+        disabled={showFooterMessage}
+      >
+        {showFooterMessage ? '❤️' : 'Click for a Special Message ❤️'}
+      </button>
+
       {selectedCard && (
         <Modal
           isOpen={isModalOpen}
@@ -111,7 +132,17 @@ function App() {
       )}
 
       <footer className="footer">
-        <p>Made with ❤️ for You</p>
+        {showFooterMessage ? (
+          <p className="footer-message">
+            <span className="footer-word footer-word-1">Made</span>
+            <span className="footer-word footer-word-2">with</span>
+            <span className="footer-word footer-word-3">❤️</span>
+            <span className="footer-word footer-word-4">for</span>
+            <span className="footer-word footer-word-5">You</span>
+          </p>
+        ) : (
+          <p style={{ opacity: 0 }}>Made with ❤️ for You</p>
+        )}
       </footer>
     </div>
   )
