@@ -23,32 +23,32 @@ const cardsData: CardData[] = [
   {
     id: 1,
     image: img1,
-    title: 'My Love',
-    message: 'Every moment with you is a treasure. You make my heart skip a beat! 💕'
+    title: 'Een van die eerste braais',
+    message: 'Vanaf die eerste braai saam, het ek geweet daar is iets besonders tussen ons. '
   },
   {
     id: 2,
     image: img3,
-    title: 'Forever',
-    message: 'I want to spend forever making you smile and creating beautiful memories together. 💕'
+    title: 'Een van ons eerste pizza dates saam',
+    message: 'Die pizza was dalk nie die beste nie, maar die geselskap was perfek.'
   },
   {
     id: 3,
     image: img6,
-    title: 'You & Me',
-    message: 'With you, I found my perfect match. You complete me in every way possible. 💕'
+    title: 'Bokkoors',
+    message: 'Een van my gunstelinge tye saam is wanneer ons die springbokke saam kyk'
   },
   {
     id: 4,
     image: img4,
-    title: 'My Heart',
-    message: 'You are the love of my life, my best friend, and my soulmate. Happy Valentine\'s Day! 💕'
+    title: 'Een van ons eerste strand dates saam',
+    message: 'Ek het nog nooit gedink ek kan meer van die strand hou totdat ek jou saam gevat het nie.'
   },
   {
     id: 5,
     image: img2,
-    title: 'Always You',
-    message: 'No matter what, my heart always chooses you. You are my everything. 💕'
+    title: 'Bridgestreet Brewerrrrrries',
+    message: 'Tot vandag toe sal daar niks ouliker as jou brei wees nie'
   },
   {
     id: 6,
