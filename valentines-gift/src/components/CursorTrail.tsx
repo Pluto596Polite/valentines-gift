@@ -38,8 +38,8 @@ const CursorTrail: React.FC = () => {
         const angle = (Math.atan2(dy, dx) * 180) / Math.PI + 90
         const unitX = dx / distance
         const unitY = dy / distance
-        const nextX = lastStep.current.x + unitX * STEP_DISTANCE
-        const nextY = lastStep.current.y + unitY * STEP_DISTANCE
+        const nextX: number = lastStep.current.x + unitX * STEP_DISTANCE
+        const nextY: number = lastStep.current.y + unitY * STEP_DISTANCE
         const nextSide = side.current === 'left' ? 'right' : 'left'
         side.current = nextSide
         lastStep.current = { x: nextX, y: nextY }

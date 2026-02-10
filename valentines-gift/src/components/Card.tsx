@@ -9,7 +9,7 @@ interface CardProps {
   onCardClick: (id: number) => void
 }
 
-const Card: React.FC<CardProps> = ({ id, image, title, message, onCardClick }) => {
+const Card: React.FC<CardProps> = ({ id, image, title, message: _message, onCardClick }) => {
   const [isFlipped, setIsFlipped] = useState(false)
   const [isClicked, setIsClicked] = useState(false)
   const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 })
