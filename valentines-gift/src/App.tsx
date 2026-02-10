@@ -26,13 +26,13 @@ const cardsData: CardData[] = [
   },
   {
     id: 2,
-    image: img2,
+    image: img3,
     title: 'Forever',
     message: 'I want to spend forever making you smile and creating beautiful memories together. 💕'
   },
   {
     id: 3,
-    image: img3,
+    image: img6,
     title: 'You & Me',
     message: 'With you, I found my perfect match. You complete me in every way possible. 💕'
   },
@@ -44,13 +44,13 @@ const cardsData: CardData[] = [
   },
   {
     id: 5,
-    image: img5,
+    image: img2,
     title: 'Always You',
     message: 'No matter what, my heart always chooses you. You are my everything. 💕'
   },
   {
     id: 6,
-    image: img6,
+    image: img5,
     title: 'Together',
     message: 'Every day with you is a new adventure. Thank you for being my Valentine! 💕'
   }
@@ -84,7 +84,7 @@ function App() {
         <h1 className="title">
           Happy Valentine's Day
         </h1>
-        <p className="subtitle">Click on the cards to reveal special messages for you</p>
+        <p className="subtitle">Click op die cards om dit om te draai</p>
       </header>
 
       <main className="cards-grid">
