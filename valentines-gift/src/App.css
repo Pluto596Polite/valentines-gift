@@ -14,6 +14,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
+  touch-action: pan-y;
 }
 
 .cursor-trail {
@@ -25,6 +26,12 @@ body {
   pointer-events: none;
   z-index: 6;
   mix-blend-mode: multiply;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .cursor-trail {
+    display: none;
+  }
 }
 
 .cursor-step {
@@ -253,44 +260,75 @@ body {
 
 @media (max-width: 768px) {
   .title {
-    font-size: 32px;
-    gap: 10px;
+    font-size: 36px;
   }
 
   .subtitle {
-    font-size: 16px;
+    font-size: 15px;
+    gap: 6px;
   }
 
   .cards-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     padding: 30px 15px;
   }
 
   .header {
-    padding: 30px 15px 15px;
+    padding: 25px 15px 15px;
   }
 
   .reveal-button {
     font-size: 16px;
     padding: 14px 32px;
+    margin: 15px auto 30px;
+  }
+  
+  .footer {
+    padding: 30px 15px 15px;
+    font-size: 14px;
+  }
+  
+  .footer-message {
+    font-size: 18px;
+    gap: 8px;
   }
 }
 
 @media (max-width: 480px) {
   .title {
-    font-size: 24px;
+    font-size: 28px;
+  }
+  
+  .subtitle {
+    font-size: 13px;
+    gap: 5px;
   }
 
   .cards-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
     padding: 20px 10px;
+  }
+  
+  .header {
+    padding: 20px 10px 10px;
   }
 
   .reveal-button {
-    font-size: 14px;
+    font-size: 15px;
     padding: 12px 28px;
+    margin: 10px auto 25px;
+  }
+  
+  .footer {
+    padding: 25px 10px 15px;
+    font-size: 13px;
+  }
+  
+  .footer-message {
+    font-size: 16px;
+    gap: 6px;
   }
 }
 

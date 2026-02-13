@@ -142,7 +142,7 @@
 @media (max-width: 768px) {
   .gradient-orb {
     filter: blur(80px);
-    opacity: 0.7;
+    opacity: 0.6;
   }
 
   .gradient-orb-1,
@@ -152,12 +152,17 @@
     width: 350px;
     height: 350px;
   }
+  
+  .gradient-orb-1 { animation-duration: 3s; }
+  .gradient-orb-2 { animation-duration: 3.5s; }
+  .gradient-orb-3 { animation-duration: 4s; }
+  .gradient-orb-4 { animation-duration: 4.5s; }
 }
 
 @media (max-width: 480px) {
   .gradient-orb {
     filter: blur(60px);
-    opacity: 0.65;
+    opacity: 0.55;
   }
 
   .gradient-orb-1,
@@ -166,5 +171,20 @@
   .gradient-orb-4 {
     width: 250px;
     height: 250px;
+  }
+  
+  .gradient-orb-1 { animation-duration: 4s; }
+  .gradient-orb-2 { animation-duration: 4.5s; }
+  .gradient-orb-3 { animation-duration: 5s; }
+  .gradient-orb-4 { animation-duration: 5.5s; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gradient-background {
+    animation: none;
+  }
+  
+  .gradient-orb {
+    animation: none;
   }
 }

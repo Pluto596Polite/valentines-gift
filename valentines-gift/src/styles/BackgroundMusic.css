@@ -50,6 +50,12 @@
 }
 
 @media (max-width: 480px) {
+  .background-music {
+    bottom: 10px;
+    right: 10px;
+    gap: 8px;
+  }
+  
   .music-button,
   .mute-button {
     width: 40px;

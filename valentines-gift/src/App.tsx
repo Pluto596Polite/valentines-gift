@@ -136,14 +136,14 @@ function App() {
       <footer className="footer">
         {showFooterMessage ? (
           <p className="footer-message">
-            <span className="footer-word footer-word-1">Made</span>
-            <span className="footer-word footer-word-2">with</span>
+            <span className="footer-word footer-word-1">Gemaak</span>
+            <span className="footer-word footer-word-2">met</span>
             <span className="footer-word footer-word-3">❤️</span>
-            <span className="footer-word footer-word-4">for</span>
-            <span className="footer-word footer-word-5">You</span>
+            <span className="footer-word footer-word-4">vir</span>
+            <span className="footer-word footer-word-5">Jou</span>
           </p>
         ) : (
-          <p style={{ opacity: 0 }}>Made with ❤️ for You</p>
+          <p style={{ opacity: 0 }}>Gemaak met baie ❤️ vir jou. </p>
         )}
       </footer>
     </div>

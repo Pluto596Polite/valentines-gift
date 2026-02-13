@@ -9,6 +9,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   font-weight: 500;
   color: #ff6b9d;
@@ -23,6 +27,10 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background: #ff5c8d;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 #root {
@@ -46,16 +54,46 @@ button {
   color: white;
   cursor: pointer;
   transition: all 0.25s;
-}
-
-button:hover {
-  background-color: #ff5a89;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 107, 157, 0.3);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 button:focus,
 button:focus-visible {
   outline: 2px solid #ff6b9d;
   outline-offset: 2px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  button:hover {
+    background-color: #ff5a89;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 157, 0.3);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  button:active {
+    background-color: #ff5a89;
+    transform: scale(0.98);
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2em;
+    line-height: 1.1;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em;
+    line-height: 1.1;
+  }
+  
+  button {
+    padding: 0.7em 1em;
+    font-size: 0.95em;
+  }
 }
